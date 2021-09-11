@@ -49,7 +49,11 @@ export const Header = (props) => {
                 <Link to="/" className="navbar-brand">Admin Dashboard</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                {auth.authenticate ? renderLoggedInLinks() : renderNonLoggedInLinks()}
+                    <Nav className="me-auto"></Nav>
+                    <Nav>
+                    {auth.authenticate ? renderLoggedInLinks() : renderNonLoggedInLinks()}
+
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
