@@ -9,6 +9,7 @@ import { isUserLoggedIn } from './actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Products } from './containers/Products/index';
 import { Orders } from './containers/Orders/index';
+import { Category } from './containers/Category/index';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <PrivateRoute exact path="/" component={Home} />
         <PrivateRoute path="/products" exact component= {Products } />
         <PrivateRoute path="/orders" exact component= {Orders} />
+        <PrivateRoute path="/category" exact component={Category}/>
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
       </Switch>

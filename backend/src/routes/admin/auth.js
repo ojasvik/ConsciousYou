@@ -8,7 +8,7 @@ const { validateSignupRequest, isRequestValidated, validateSigninRequest } = req
 
 router.post('/admin/signup', validateSignupRequest, isRequestValidated, signup);
 router.post('/admin/signin', validateSigninRequest, isRequestValidated, signin);
-router.post('/admin/signout', requireSignIn, signout);
+router.post('/admin/signout', signout);
 
 
 module.exports = router;
